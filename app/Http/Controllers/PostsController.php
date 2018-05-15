@@ -55,7 +55,6 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->save();
-
         return redirect('http://localhost:85/laravelapps/myFirstLaravelApp/public/posts')->with('success', 'Post Created');
     }
 
