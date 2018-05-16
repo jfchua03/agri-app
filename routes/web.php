@@ -14,9 +14,15 @@ Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
 Route::resource('posts', 'PostsController');
-
+Route::resource('profile', 'UsersProfileController');
 Route::get('/users/{id}', function($id) {
     return 'This is user ' . $id;
 });
 
 
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');
+// Route::get('/profile/{id}', 'UsersProfileController@show');
+// Route::get('/profile/{id}/edit/', 'UsersProfileController@edit');
