@@ -14,7 +14,33 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>You are logged in!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($posts as $post)
+                                        <tr>
+                                            <td>{{$post->title}}</td>
+                                            <td><a href="#" class="btn btn-success">Edit</a></td>
+                                            <td><a href="#" class="btn btn-danger">Delete</a></td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
